@@ -24,6 +24,7 @@ db.companyLocation = require('../models/companyLocation.js')(sequelize, Sequeliz
 db.contactPerson = require('../models/contactPerson.js')(sequelize, Sequelize);
 db.job = require('../models/job.js')(sequelize, Sequelize);
 db.jobCompany = require('../models/jobCompany.js')(sequelize, Sequelize);
+db.user = require('../models/user.js')(sequelize, Sequelize)
 
 //Relations
 // ===> n-m relationships

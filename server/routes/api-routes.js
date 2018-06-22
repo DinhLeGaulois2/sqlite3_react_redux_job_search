@@ -1,14 +1,10 @@
-const Sequelize = require('sequelize');
-
-const Op = Sequelize.Op;
+const passport = require('passport');
+const requireAuth = passport.authenticate('jwt', { session: false });
 
 const db = require("../models");
 
-const cst = require('../constants/jobDBCsts.js');
-const states = require('../constants/states.js');
-
 module.exports = function (app) {
-    app.post("/api/job/add", (req, res) => {
+    app.post("/api/job/add", requireAuth, (req, res) => {
         if (req.body.company.name.length) {
             let source = req.body.company;
             db.company.findOrCreate({ where: { name: source.name, type: source.type } })
@@ -74,7 +70,7 @@ module.exports = function (app) {
 
     })
 
-    app.get('/api/job/get/all', (req, res) => {
+    app.get('/api/job/get/all', requireAuth, (req, res) => {
         db.job.findAll({
             attributes: ['id', 'title', 'description', 'status', 'appliedAt', 'comment', 'url']
         })
@@ -120,7 +116,7 @@ module.exports = function (app) {
             .catch(err => res.status(400).json(err))
     })
 
-    app.get('/api/job/get/recent', (req, res) => {
+    app.get('/api/job/get/recent', requireAuth, (req, res) => {
         db.job.findAll({
             order: [['appliedAt', 'DESC']],
             attributes: ['id', 'title', 'description', 'status', 'appliedAt', 'comment', 'url']
@@ -167,7 +163,7 @@ module.exports = function (app) {
             .catch(err => res.status(400).json(err))
     })
 
-    app.put('/api/job/update/', (req, res) => {
+    app.put('/api/job/update', requireAuth, (req, res) => {
         db.job.findOne({ where: { id: req.body.id } })
             .then(aJob => {
                 aJob.updateAttributes({

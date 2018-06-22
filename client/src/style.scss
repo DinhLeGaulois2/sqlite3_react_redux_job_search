@@ -1,0 +1,74 @@
+$bg_main:#8a9a98;
+$btn_menu_bg: #FFFFFF;
+$btn_menu_bg_hover: #a8c0c9;
+$btn_menu_color: blue;
+$widthdivList:50%;
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.menuButton{
+  background-color:$btn_menu_bg;
+  color:$btn_menu_color;
+  padding:10px;
+  border-radius:10px;
+  font-size:200%;
+}
+
+.menuButton:hover{
+  background-color:$btn_menu_bg_hover;
+}
+
+.btnSubmit:disabled{
+  background-color:darkgray;
+  color:gray;
+  cursor: not-allowed;
+}
+
+.btn{  
+  background-color: black;
+  color: #308cf2;
+  border-color:#6ec0ef;
+  font-size:150%;
+  border-radius: 10px;
+}
+
+.btnSubmit:enabled{
+  background-color: black;
+  color: cyan;
+}
+
+.mainTopBtn{
+  background-color:black;
+  width:100%;
+  padding:30px;
+  height: auto;
+  border-radius:20px;
+  text-align: center;
+}
+
+.centeredChapterTitle{  
+  background-color: black;
+  color: cyan;
+  width: 100%;
+  padding: 10px;
+  font-size: 200%;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0px
+}
+
+div.relative{  
+  position: relative;
+}
+
+button.btnDelete{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: white;
+  font-weight: bold;
+  color:red;
+  border: 1px solid black;
+}
