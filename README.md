@@ -31,21 +31,10 @@ As long as all "***Required***" fields are empty, we could not submit the form (
 ![alt text](assets/img/update.jpg)
 
 ## Execution
-### You have to create a file "**config.js**" (server/config.js) to contain configuration's parameters that we want to keep secret, for now, we need
-
-```
-module.exports = {
-    secret: XXXXXXXXXXXXXXXXXX,    
-    db_pwd: YYYYYYYYYYYYYYYYYY
-};
-
-// "secret" is the "secret" to create the "TOKEN"
-// "db_pwd" is the password for your database (that you created) 
-```
 
 > The project is build as a 3-tier architecture (fullstack), and the three parts was built to be ready to be put on different machines (which could be in different continents). So, we need to run 3 parts independently, in order: **database**, then **server** then **user interface**.
 >
-> 1 - You need to create your database with the name '**job_search_organizer**' (enter the password of **YOUR** database).
+> 1 - Start your database...
 >
 > 2 - Open a terminal, and execute (in the folder "**server**"): **npm install** (to install **dependencies**). Then: **npm run dev** to start the server.
 > 
