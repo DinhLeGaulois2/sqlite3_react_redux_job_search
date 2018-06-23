@@ -8,11 +8,7 @@ To build an entire application using 3-tier architecture using **React/Redux** a
 > * **Security**: **JWT-simple**, **bcrypt-nodejs**, **passport** (**passport-jwt**, **passport-local**)
 > * **Front End**: **React-Redux**
 > * **Back End**: **Express/Node.js** + **Sequelize** (ORM)
-<<<<<<< HEAD
 > * **Database**: **SQLite3**
-=======
-> * **Database**: **mySQL**
->>>>>>> f1d4a09cdc23c66692b1320c8dd571252e323661
 
 ## The EER Diagram
 
